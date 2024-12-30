@@ -1,0 +1,728 @@
+/* === Definindo variáveis de cores === */
+:root {
+    --cor-primaria: #0288d1;
+    /* Cor vibrante (laranja-avermelhado) */
+    --cor-secundaria: #b3e5fc;
+    /* Cor de destaque (roxo azulado) */
+    --cor-fundo: #f4f4f9;
+    /* Cor de fundo clara */
+    --cor-texto: #333;
+    /* Cor de texto principal */
+    --cor-destaque: #ffd700;
+    /* Amarelo dourado (para chamar atenção) */
+    --cor-botao: #8bc34a;
+    /* Cor para botões */
+    --cor-botao-hover: #689f38;
+    /* Hover para os botões */
+    --cor-rodape: #333;
+    /* Cor de rodapé */
+    --cor-link: #ff6f61;
+    /* Cor dos links */
+    --list-style: none;
+    /* Remove o estilo padrão de listas */
+}
+
+/* === Resetando margin e padding === */
+* {
+
+    margin: 0;
+    /* Remove margem padrão */
+    padding: 0;
+    /* Remove padding padrão */
+    box-sizing: border-box;
+    /* Inclui bordas no cálculo de dimensões */
+}
+/* Defina a fonte padrão para todo o corpo do texto */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333; /* Cor do texto */
+}
+
+/* Para os títulos (h2, h3, etc.),  */
+h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    color: var(--cor-texto); /* Cor personalizada */
+}
+
+/* Também pode aplicar fontes para outras partes específicas, como parágrafos */
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color:var(--cor-rodape); /* Cor do texto */
+}
+
+
+/* ul  ol  */
+ul,
+li {
+    list-style: var(--list-style);
+    /* Usa a variável global */
+}
+
+/* seçao depoimentos */
+.testimonials {
+    padding: 2rem;
+    background-color: var(--color-background-secondary);
+    /* Cor de fundo variável */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    text-align: center;
+    /* Centraliza título e parágrafo */
+}
+
+.testimonials h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--cor-botao);
+    /* Cor variável */
+}
+
+.testimonials p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: var(--color-text);
+    /* Cor variável */
+}
+
+.testimonials-row {
+    display: flex;
+    justify-content: center;
+    /* Centraliza as imagens */
+    gap: 2rem;
+    /* Espaçamento entre as imagens */
+}
+
+.testimonials-row img {
+    max-width: 300px;
+    /* Tamanho máximo das imagens */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    transition: transform 0.3s ease;
+    /* Animação suave ao passar o mouse */
+}
+
+.testimonials-row img:hover {
+    transform: scale(1.05);
+    /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra nas imagens */
+}
+
+
+/* === Estilizando o body === */
+body {
+    font-family: 'Arial', sans-serif;
+    /* Define a fonte padrão */
+    background-color: var(--cor-fundo);
+    /* Aplica a cor de fundo */
+    color: var(--cor-texto);
+    /* Define a cor do texto */
+    line-height: 1.6;
+    /* Ajusta o espaçamento entre linhas */
+    text-align: center;
+    /* Centraliza todo o texto por padrão */
+}
+
+/* === Container comum === */
+.container {
+    width: 90%;
+    /* Largura responsiva */
+    margin: 0 auto;
+    /* Centraliza o container horizontalmente */
+    max-width: 1200px;
+    /* Limita a largura máxima */
+}
+
+/* === Cabeçalho === */
+.hero-section {
+    background: linear-gradient(45deg, var(--cor-primaria), var(--cor-secundaria));
+    /* Fundo em gradiente */
+    color: var(--cor-fundo);
+    /* Cor do texto */
+    text-align: center;
+    /* Centraliza o texto */
+    padding: 80px 20px;
+    /* Espaçamento interno */
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    /* Tamanho do texto */
+    font-weight: bold;
+    /* Negrito */
+    margin-bottom: 20px;
+    /* Espaço abaixo do título */
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    /* Tamanho do texto */
+    margin-bottom: 30px;
+    /* Espaço abaixo do parágrafo */
+}
+
+/* === Botões padrão === */
+.cta-button {
+    background-color: var(--cor-botao);
+    /* Cor de fundo do botão */
+    color:var(--cor-fundo);
+    /* Cor do texto */
+    padding: 15px 30px;
+    /* Espaçamento interno do botão */
+    font-size: 1.2rem;
+    /* Tamanho do texto */
+    text-decoration: none;
+    /* Remove sublinhado */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    transition: background-color 0.3s;
+    /* Transição suave no hover */
+    margin-top: 20px;
+    /* Espaçamento acima do botão */
+    margin-bottom: 20px;
+    /* Espaçamento abaixo do botão */
+    display: inline-block;
+    /* Exibe como botão */
+    text-align: center;
+    /* Centraliza o texto no botão */
+}
+
+/* === Efeito hover no botão === */
+.cta-button:hover {
+    background-color: var(--cor-botao-hover);
+    /* Cor ao passar o mouse */
+    text-decoration: none;
+    /* Mantém sem sublinhado */
+}
+
+/* === Imagem responsiva === */
+.hero-section img {
+    width: 50%;
+    /* Define largura como 50% do container */
+    max-width: 600px;
+    /* Limita largura máxima */
+    height: auto;
+    /* Mantém proporções */
+    display: block;
+    /* Remove espaços extras */
+    margin: 20px auto;
+    /* Centraliza e adiciona espaço vertical */
+}
+
+/* === Benefícios === */
+.benefits {
+    padding: 60px 20px;
+    /* Espaçamento interno */
+    background-color:var(--cor-fundo);
+    /* Fundo branco */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+.benefits h2 {
+    font-size: 2.5rem;
+    /* Tamanho do texto */
+    color: var(--cor-botao);
+    /* Cor do título */
+    margin-bottom: 20px;
+    /* Espaço abaixo do título */
+}
+
+.benefits ul {
+    list-style: none;
+    /* Remove marcadores */
+    padding: 0;
+    /* Remove padding padrão */
+    font-size: 1.1rem;
+    /* Tamanho do texto */
+    line-height: 1.8;
+    /* Espaçamento entre linhas */
+}
+
+/* === Botões em todas as seções === */
+button,
+.cta-button {
+    background-color: var(--cor-botao);
+    /* Fundo do botão */
+    color:var(--cor-fundo);
+    /* Cor do texto */
+    margin: 20px 0;
+    /* Espaçamento vertical ao redor do botão */
+    padding: 15px 30px;
+    /* Tamanho do botão */
+    border-radius: 50px;
+    /* Bordas arredondadas */
+    transition: 0.3s;
+    /* Transição suave */
+}
+
+/* === Guia de poses === */
+.guide {
+    padding: 60px 20px;
+    background-color: var(--cor-primaria);
+    color:var(--cor-fundo);
+    text-align: center;
+}
+
+/* para quem e esse guias */
+.best-angle {
+    padding: 2rem;
+    background: linear-gradient(45deg, var(--cor-primaria), var(--cor-secundaria));
+    /* Fundo em gradiente */
+    text-align: center;
+    /* Centraliza o texto */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+}
+
+.best-angle h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--cor-fundo);
+    /* Cor principal */
+    line-height: 1.4;
+}
+
+.best-angle h2 span {
+    color: var(--color-secondary);
+    /* Destaque com outra cor */
+}
+
+.best-angle .content {
+    display: flex;
+    justify-content: center;
+    /* Centraliza o conteúdo horizontalmente */
+    align-items: center;
+    /* Alinha o conteúdo verticalmente */
+    gap: 2rem;
+    /* Espaçamento entre as colunas */
+    flex-wrap: wrap;
+    /* Permite adaptação em telas menores */
+}
+
+.best-angle .content .text {
+    flex: 1;
+    /* Cada coluna de texto ocupa o mesmo espaço */
+    text-align: left;
+    /* Alinha o texto à esquerda */
+}
+
+.best-angle .content .text p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--cor-fundo);
+    /* Texto com cor variável */
+    margin-bottom: 1rem;
+    /* Espaçamento entre os parágrafos */
+}
+
+.best-angle .content .image {
+    flex: 1;
+    /* A imagem ocupa o mesmo espaço das colunas de texto */
+    display: flex;
+    justify-content: center;
+    /* Centraliza a imagem */
+    align-items: center;
+    /* Alinha verticalmente */
+}
+
+.best-angle .content .image img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    /* Bordas arredondadas */
+
+}
+
+/*Para quem esse  guia */
+.pose-guide {
+    background-color:var(--cor-fundo);
+    padding: 50px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content h2 {
+    color: var(--cor-botao);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.features {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features li {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.cta-text p {
+    font-size: 1.125rem;
+    color:var(--cor-botao-hover);
+    margin-bottom: 30px;
+}
+
+.btn-transform {
+    background-color:var(--cor-botao);
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.btn-transform:hover {
+    background-color:var(--cor-botao-hover);
+}
+.icon {
+    font-size: 24px; /* Tamanho do ícone */
+    color: var(--cor-botao-hover);  /* Cor do ícone */
+}
+/* Estilo da seção bônus */
+.bonuses {
+    padding: 40px 0; /* Adiciona espaçamento nas laterais e em cima/baixo da seção */
+    background-color: #f4f4f4; /* Cor de fundo suave para a seção */
+}
+
+/* Contêiner que envolve todos os itens bônus */
+.container {
+    
+    max-width: auto; /* Limita a largura do conteúdo */
+    margin: 0px auto; /* Centraliza o conteúdo */
+    padding: 0 10px; /* Espaçamento nas laterais */
+}
+.container .titulo{
+    color: var(--cor-botao);
+}
+
+
+/* Estilo de cada item bônus */
+.bonus-item {
+    display: flex; /* Aplica o Flexbox para alinhar os itens lado a lado */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    margin-bottom: 60px; /* Adiciona espaçamento entre os itens bônus */
+    
+}
+
+/* Imagem do bônus */
+.bonus-image {
+    width: 210px; /* Define a largura da imagem */
+    height: auto; /* Ajusta a altura automaticamente para manter a proporção */
+    margin-right: 20px; /* Adiciona espaçamento à direita da imagem */
+}
+
+/* Descrição do bônus */
+.bonus-description {
+    max-width: 700px; /* Limita a largura do texto */
+    text-align: center; /* Centraliza o texto dentro de bonus-description */
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    align-items: center; /* Centraliza o conteúdo dentro de bonus-description */
+}
+
+/* Título do bônus (H3) */
+.bonus-description h3 {
+    color: var(--cor-texto); /* Define a cor usando a variável */
+    font-size: 1.5rem; /* Tamanho do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    animation: pulse 2s infinite; /* Aplica o efeito de pulsação */
+}
+/* Estilo para o valor riscado */
+.riscado {
+    text-decoration: line-through; /* Riscado */
+    color:var(--cor-link); /* Cor do valor riscado */
+}
+/* Para centralizar o conteúdo dentro do <span> no h3 */
+.bonus-description h3 .bonus {
+    color:var(--cor-botao) ; /* Cor do texto dentro do <span> */
+}
+
+/* Parágrafo da descrição */
+.bonus-description p {
+    font-size: 1rem; /* Tamanho do texto */
+    color:var(--cor-texto); /* Cor do texto */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
+    text-align: center; /* Alinha o texto do parágrafo ao centro */
+    font-weight: 600;
+}
+
+/* Efeito de pulsação */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Tamanho original */
+    }
+    50% {
+        transform: scale(1.05); /* Aumenta um pouco o tamanho */
+    }
+    100% {
+        transform: scale(1); /* Retorna ao tamanho original */
+    }
+}
+/* Estilizando a seção */
+.offer {
+    background-color: var(--cor-fundo); /* Cor de fundo suave */
+    padding: 40px 0; /* Espaçamento superior e inferior */
+    
+}
+
+/* Container para centralizar o conteúdo */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Centraliza o título h2 */
+.offer h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--cor-botao);
+    margin-bottom: 20px;
+}
+
+/* Estilizando os detalhes da oferta */
+.offer-details {
+    text-align: center;
+    position: relative;
+}
+
+/* Estilizando o título h3 com fundo vermelho e posicionamento */
+.offer-details h3 {
+    background-color:var(--cor-link); /* Fundo vermelho */
+    color:var(--cor-texto); /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    position: absolute;
+    top: 10px; /* Coloca o título acima da imagem */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px; /* Bordas arredondadas na imagem */
+    
+}
+
+/* Estilizando a imagem */
+.offer-details img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 80px; /* Espaço entre o título e a imagem */
+    border-radius: 8px; /* Bordas arredondadas na imagem */
+}
+
+/* Estilizando a lista de itens */
+.offer-details ul {
+    list-style: none;
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+.offer-details ul li {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+    margin-bottom: 10px;
+}
+
+/* Estilizando o preço */
+.offer-details p {
+    font-size: 1.25rem;
+    color:var(--cor-texto);
+    margin-top: 20px;
+}
+
+/* Estilizando o botão de CTA */
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--cor-botao); /* Cor do botão */
+    color:var(--cor-fundo);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+/* Hover para o botão */
+.cta-button:hover {
+    background-color: var(--cor-botao-hover); /* Hover */
+}
+/* Estilo para a seção de garantia */
+.garantia {
+    background-color:var(--cor-fundo); /* Cor de fundo clara */
+    padding: 30px; /* Espaçamento em torno do conteúdo */
+    display: flex; /* Usando flexbox para organizar imagem e texto ao lado */
+    align-items: center; /* Alinha o conteúdo verticalmente no centro */
+    justify-content: space-between; /* Espaça a imagem e o texto */
+    margin-top: 50px; /* Espaçamento acima da seção */
+}
+
+/* Imagem dentro da seção de garantia */
+.garantia-image {
+    display: flex;
+    float: left;
+    max-width: 20%; /* Ajusta a largura da imagem para 40% */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 20px; /* Espaçamento à direita da imagem */
+    object-fit: cover; /* Ajusta a imagem para cobrir sem distorcer */
+}
+
+/* Estilo para o texto da seção de garantia */
+.garantia-text {
+    display: flex; /* Usando flexbox dentro do texto */
+    flex-direction: column; /* Organiza os itens em coluna (h3 e p) */
+    justify-content: center; /* Alinha o conteúdo verticalmente no centro */
+    max-width: 55%; /* Limita a largura do texto para 55% */
+}
+
+/* Título da seção de garantia */
+.garantia-text h3 {
+    font-size: 1.8rem; /* Tamanho do título */
+    font-weight: bold;
+    color:var(--cor-botao); /* Cor do título */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+/* Parágrafos da seção de garantia */
+.garantia-text p {
+    font-size: 1.2rem; /* Tamanho da fonte dos parágrafos */
+    color:var(--cor-texto); /* Cor do texto */
+    line-height: 1; /* Espaçamento entre as linhas */
+    max-width: 800px; /* Largura máxima para o texto */
+    margin: 0 auto; /* Centraliza o texto */
+    margin-bottom: 10px; /* Espaçamento entre os parágrafos */
+    font-weight: 600;
+}
+/* Estilo para a seção FAQ */
+.faq {
+    background-color: var(--cor-fundo); /* Fundo suave para a seção */
+    padding: 20px 10px; /* Espaçamento interno para a seção */
+    margin-top: 10px; /* Espaçamento acima da seção */
+}
+
+/* Container para centralizar o conteúdo */
+.faq .container {
+    max-width: 1200px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 0 20px; /* Espaçamento lateral */
+}
+
+/* Título da seção FAQ */
+.faq h2 {
+    font-size: 2rem; /* Tamanho do título */
+    font-weight: bold;
+    text-align: center; /* Alinha o título ao centro */
+    color: var(--cor-botao); /* Cor do título */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+/* Lista de perguntas e respostas */
+.faq ul {
+    list-style-type: none; /* Remove o estilo padrão da lista */
+    padding: 0; /* Remove o padding da lista */
+}
+
+/* Item da lista (pergunta e resposta) */
+.faq ul li {
+    background: linear-gradient(45deg, var(--cor-primaria), var(--cor-secundaria)); /* Cor de fundo branca para cada item */
+    padding: 3px; /* Espaçamento interno em cada item */
+    margin-bottom: 15px; /* Espaçamento entre os itens */
+    border-radius: 8px; /* Bordas arredondadas para os itens */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombras sutis nos itens */
+    font-weight: 600;
+}
+
+/* Estilo para as perguntas (em negrito) */
+.faq ul li strong {
+    display: block; /* Exibe o texto da pergunta em bloco */
+    font-size: 1.2rem; /* Tamanho do texto da pergunta */
+    color: #333; /* Cor do texto */
+    margin-bottom: 8px; /* Espaçamento abaixo da pergunta */
+}
+
+/* Resposta das perguntas */
+.faq ul li p {
+    font-size: 1rem; /* Tamanho da resposta */
+    color:var(--cor-fundo); /* Cor suave para o texto da resposta */
+    line-height: 1.5; /* Espaçamento entre as linhas */
+    margin: 0; /* Remove margem */
+}
+
+
+/* === Rodapé === */
+/* Estilo do rodapé principal */
+footer {
+    background-color:var(--cor-rodape); /* Fundo escuro para destacar o rodapé */
+    color: var(--cor-rodape); /* Cor branca para contraste com o fundo */
+    text-align: center; /* Centraliza todo o conteúdo */
+    padding: 1px 0; /* Espaçamento interno no topo e na base */
+    font-family: 'Arial', sans-serif; /* Define a fonte padrão do rodapé */
+}
+
+/* Contêiner para limitar o conteúdo */
+.footer-container {
+    max-width: 1200px; /* Define a largura máxima */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+    padding: 0 15px; /* Adiciona espaçamento interno lateral */
+}
+
+/* Estilo dos parágrafos */
+.footer-container p {
+    color: var(--cor-primaria);
+    margin: 5px 0; /* Espaçamento entre parágrafos */
+    font-size: 14px; /* Define o tamanho do texto */
+}
+
+/* Destaque para o nome */
+.footer-container strong {
+    color: #00bcd4; /* Cor azul para destacar seu nome */
+}
+
+/* Seção dos ícones sociais */
+.footer-icons {
+    margin-top: 10px; /* Espaçamento acima da área dos ícones */
+}
+
+/* Estilo dos links dos ícones */
+.footer-icons a {
+    margin: 0 10px; /* Espaçamento lateral entre os ícones */
+    color:var(--cor-fundo); /* Cor padrão dos ícones */
+    font-size: 20px; /* Tamanho dos ícones */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Efeito hover nos ícones sociais */
+.footer-icons a:hover {
+    color: var(--cor-secundaria); /* Muda para azul ao passar o mouse */
+}
